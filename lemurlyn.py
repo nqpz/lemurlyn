@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # encoding: utf-8
 
 import sys
@@ -133,7 +133,7 @@ class Game:
         while True:
             if i == len(sentences):
                 break
-            sentence = sentences[i].decode('utf-8')
+            sentence = sentences[i]
 
             go_on = False
             for event in self.step():
@@ -339,24 +339,24 @@ class Game:
         self.talk_character(
             self.char.snegl,
             [
-                'Iiih, I har alt for meget ramasjang og tjuhej!',
-                'Jeg har derfor sat fartgrænsen ned til 1 km/t over hele Fartby.',
-                'Ingen kan stoppe mig!'
+                u'Iiih, I har alt for meget ramasjang og tjuhej!',
+                u'Jeg har derfor sat fartgrænsen ned til 1 km/t over hele Fartby.',
+                u'Ingen kan stoppe mig!'
             ])
 
         self.talk_character(
             self.char.and_,
             [
-                'Åh nej.  Sikke noget.',
-                'Ingen kan redde os.  Det er også ligemeget.'
+                u'Åh nej.  Sikke noget.',
+                u'Ingen kan redde os.  Det er også ligemeget.'
             ])
 
         self.talk_character(
             self.char.lemur,
             [
-                'Jo, jeg kan!',
-                'Jeg kan løbe fremad på højretasten og hoppe på mellemrumstasten.',
-                'Det skal gå STÆRKT!'
+                u'Jo, jeg kan!',
+                u'Jeg kan løbe fremad på højretasten og hoppe på mellemrumstasten.',
+                u'Det skal gå STÆRKT!'
             ])
 
         height_function = lambda x: int(math.sin(x / 20.0) * 20.0)
@@ -372,9 +372,9 @@ class Game:
         self.talk_character(
             self.char.regnorm,
             [
-                'Godt klaret, Lemur!',
-                'Nu er der atter fart over feltet i Fartby.',
-                'Her er 100 millioner for din hjælp.'
+                u'Godt klaret, Lemur!',
+                u'Nu er der atter fart over feltet i Fartby.',
+                u'Her er 100 millioner for din hjælp.'
             ])
 
 def parse_args(args):
